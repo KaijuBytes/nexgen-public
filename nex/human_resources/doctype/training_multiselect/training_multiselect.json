@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:training_abbreviation",
+ "creation": "2025-02-07 14:20:14.521176",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "training_abbreviation",
+  "training_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "training_name",
+   "fieldtype": "Link",
+   "label": "Training Name",
+   "options": "Training"
+  },
+  {
+   "fetch_from": "training_name.training_abbreviation",
+   "fieldname": "training_abbreviation",
+   "fieldtype": "Link",
+   "label": "Training Abbreviation",
+   "options": "Training",
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-19 09:18:06.214613",
+ "modified_by": "Administrator",
+ "module": "Human Resources",
+ "name": "Training MultiSelect",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

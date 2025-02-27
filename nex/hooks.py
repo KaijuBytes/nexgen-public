@@ -244,4 +244,4 @@ app_license = "unlicense"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
+app_include_css = "/assets/nex/css/custom.css"

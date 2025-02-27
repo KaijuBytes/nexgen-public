@@ -1,0 +1,195 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-18 13:39:45.453752",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "from",
+  "status",
+  "completed_status",
+  "transaction_type",
+  "description",
+  "column_break_rjsz",
+  "location_icon",
+  "latest_location",
+  "urgent",
+  "responsible",
+  "email_of_the_responsible",
+  "control_number_outside",
+  "created_by",
+  "last_modified_by",
+  "attachment_method",
+  "single_documents_or_records",
+  "group_of_documents_or_records",
+  "print_settings_section",
+  "extra_rows"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Small Text",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nOngoing\nCompleted",
+   "reqd": 1
+  },
+  {
+   "fieldname": "control_number_outside",
+   "fieldtype": "Data",
+   "label": "Control Number (Outside)"
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Transaction Type",
+   "options": "\nSimple\nComplex\nHighly Technical",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "urgent",
+   "fieldtype": "Check",
+   "label": "Urgent?"
+  },
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Link",
+   "label": "Responsible",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "responsible.email",
+   "fieldname": "email_of_the_responsible",
+   "fieldtype": "Link",
+   "label": "Email of the Responsible",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Autocomplete",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Created By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_modified_by",
+   "fieldtype": "Autocomplete",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Last Modified By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_rjsz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "completed_status",
+   "fieldtype": "Data",
+   "label": "Completed Status"
+  },
+  {
+   "fieldname": "latest_location",
+   "fieldtype": "Read Only",
+   "label": "Latest Location",
+   "options": "Office Abbreviation"
+  },
+  {
+   "fieldname": "location_icon",
+   "fieldtype": "Read Only",
+   "label": "Location"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Link",
+   "label": "From",
+   "options": "Office Abbreviation"
+  },
+  {
+   "fieldname": "print_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Print Settings"
+  },
+  {
+   "fieldname": "extra_rows",
+   "fieldtype": "Int",
+   "label": "Extra Rows"
+  },
+  {
+   "fieldname": "attachment_method",
+   "fieldtype": "Select",
+   "label": "Attachment Method",
+   "options": "Single\nGroup\nBoth"
+  },
+  {
+   "fieldname": "group_of_documents_or_records",
+   "fieldtype": "Table MultiSelect",
+   "label": "Group of Document/s or Record/s",
+   "options": "Group Document MultiSelect"
+  },
+  {
+   "fieldname": "single_documents_or_records",
+   "fieldtype": "Table MultiSelect",
+   "label": "Single Document/s or Record/s",
+   "options": "Single Document TableMultiSelect"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-27 10:12:12.397084",
+ "modified_by": "Administrator",
+ "module": "Documents",
+ "name": "Document Tracker",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Documents User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

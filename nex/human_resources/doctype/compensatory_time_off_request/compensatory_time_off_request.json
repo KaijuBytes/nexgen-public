@@ -1,0 +1,188 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "HR-CTO-.YYYY.-.####",
+ "creation": "2025-02-06 13:38:33.147792",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_yogb",
+  "name_of_the_requester",
+  "date_requested",
+  "gender",
+  "column_break_cbdh",
+  "position_title",
+  "bureauservices",
+  "division",
+  "amended_from",
+  "section_break_1",
+  "from_date",
+  "to_date",
+  "cto_hours",
+  "leave_approver",
+  "approver_position_title",
+  "office_select",
+  "approver_office",
+  "column_break_keya",
+  "reference_dates",
+  "reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_yogb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Compensatory Time-Off Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "name_of_the_requester",
+   "fieldtype": "Link",
+   "label": "Name of the Requester",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cbdh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Dates & Reason"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "column_break_keya",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "leave_approver",
+   "fieldtype": "Link",
+   "label": "Leave Approver",
+   "options": "Document Signatory"
+  },
+  {
+   "fieldname": "date_requested",
+   "fieldtype": "Date",
+   "label": "Date Requested"
+  },
+  {
+   "fetch_from": "name_of_the_requester.bureauservices",
+   "fieldname": "bureauservices",
+   "fieldtype": "Link",
+   "label": "Bureau/Services",
+   "options": "Bureau",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "name_of_the_requester.division",
+   "fieldname": "division",
+   "fieldtype": "Link",
+   "label": "Division",
+   "options": "Division",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "name_of_the_requester.position_title",
+   "fieldname": "position_title",
+   "fieldtype": "Link",
+   "label": "Position Title",
+   "options": "Position Title",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cto_hours",
+   "fieldtype": "Int",
+   "label": "CTO Hours"
+  },
+  {
+   "fetch_from": "leave_approver.position_title",
+   "fieldname": "approver_position_title",
+   "fieldtype": "Link",
+   "label": "Position Title",
+   "options": "Position Title",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "leave_approver.office",
+   "fieldname": "approver_office",
+   "fieldtype": "Dynamic Link",
+   "label": "Office",
+   "options": "office_select",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reference_dates",
+   "fieldtype": "Table",
+   "label": "COC Reference Date/s",
+   "options": "CTO Reference Dates"
+  },
+  {
+   "fetch_from": "name_of_the_requester.sex_birth",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Sex Designated at Birth",
+   "options": "Gender"
+  },
+  {
+   "fetch_from": "leave_approver.office_selector",
+   "fieldname": "office_select",
+   "fieldtype": "Link",
+   "label": "Office Select",
+   "options": "DocType",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-25 14:18:07.279020",
+ "modified_by": "Administrator",
+ "module": "Human Resources",
+ "name": "Compensatory Time-Off Request",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

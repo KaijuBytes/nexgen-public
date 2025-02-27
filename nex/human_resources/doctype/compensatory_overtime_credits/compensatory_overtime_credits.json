@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "HR-DRRMD-COC-.YYYY.-.#####",
+ "creation": "2025-02-04 14:36:29.833112",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "created_by",
+  "hrmd_approved_coc_document",
+  "overtime_description",
+  "column_break_xvnn",
+  "section_break_fddd",
+  "employee_list_and_earned_coc"
+ ],
+ "fields": [
+  {
+   "fieldname": "hrmd_approved_coc_document",
+   "fieldtype": "Attach",
+   "label": "HRMD Approved COC Document"
+  },
+  {
+   "fieldname": "overtime_description",
+   "fieldtype": "Data",
+   "label": "Overtime Description"
+  },
+  {
+   "fieldname": "column_break_xvnn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Created By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_fddd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee_list_and_earned_coc",
+   "fieldtype": "Table",
+   "label": "Employee List and Earned COC",
+   "options": "COC Employee List"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-06 10:32:49.962398",
+ "modified_by": "Administrator",
+ "module": "Human Resources",
+ "name": "Compensatory Overtime Credits",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

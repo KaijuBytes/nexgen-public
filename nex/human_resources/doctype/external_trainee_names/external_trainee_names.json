@@ -1,0 +1,169 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:exttrainee_name",
+ "creation": "2025-02-07 14:08:36.173177",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "exttrainee_name",
+  "salutation",
+  "first_name",
+  "middle_name",
+  "last_name",
+  "column_break_gnak",
+  "sex_birth",
+  "gender",
+  "date_of_birth",
+  "column_break_mgwb",
+  "position_title",
+  "agency_name",
+  "office_abbreviation",
+  "section_break_scrx",
+  "contact_number",
+  "email",
+  "column_break_iemv",
+  "column_break_kgvg"
+ ],
+ "fields": [
+  {
+   "fieldname": "salutation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Salutation",
+   "options": "Salutation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Last Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_gnak",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sex_birth",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sex Designated at Birth",
+   "options": "\nMale\nFemale",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_mgwb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "position_title",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Position Title",
+   "options": "Position Title"
+  },
+  {
+   "fieldname": "section_break_scrx",
+   "fieldtype": "Section Break",
+   "label": "Contact Details"
+  },
+  {
+   "fieldname": "column_break_iemv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "agency_name",
+   "fieldtype": "Link",
+   "label": "Company/Agency",
+   "options": "Agency"
+  },
+  {
+   "fieldname": "office_abbreviation",
+   "fieldtype": "Link",
+   "label": "Office Abbreviation",
+   "options": "Office Abbreviation"
+  },
+  {
+   "fieldname": "column_break_kgvg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "exttrainee_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name",
+   "read_only": 1,
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-19 09:28:06.840422",
+ "modified_by": "Administrator",
+ "module": "Human Resources",
+ "name": "External Trainee Names",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

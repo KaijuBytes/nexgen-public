@@ -1,0 +1,286 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:DRRMD-ASSET-{YYYY}-{####}",
+ "creation": "2025-02-08 12:11:40.822400",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "asset_entry_section",
+  "column_break_batt",
+  "asset_name",
+  "brand",
+  "model",
+  "serial_number",
+  "description",
+  "column_break_yhgp",
+  "status",
+  "deployable",
+  "asset_classification",
+  "asset_category",
+  "asset_location",
+  "asset_location_details",
+  "date_acquired",
+  "unit_value",
+  "property_custodian",
+  "issued_to",
+  "is_set",
+  "for_gatepass_details_section",
+  "uom",
+  "description_summary",
+  "general_services_division_section",
+  "column_break_vqkh",
+  "par_no",
+  "gsd_property_number",
+  "supporting_documents",
+  "column_break_agax",
+  "gsd_remarks",
+  "dimension_section",
+  "length",
+  "width",
+  "height",
+  "column_break_fztj",
+  "dimension",
+  "attached_items_section",
+  "asset_items"
+ ],
+ "fields": [
+  {
+   "fieldname": "gsd_property_number",
+   "fieldtype": "Data",
+   "label": "GSD Property Number"
+  },
+  {
+   "fieldname": "date_acquired",
+   "fieldtype": "Date",
+   "label": "Date Acquired"
+  },
+  {
+   "fieldname": "unit_value",
+   "fieldtype": "Currency",
+   "label": "Unit Value"
+  },
+  {
+   "fieldname": "gsd_remarks",
+   "fieldtype": "Small Text",
+   "label": "GSD Remarks"
+  },
+  {
+   "fieldname": "property_custodian",
+   "fieldtype": "Link",
+   "label": "Property Custodian",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "issued_to",
+   "fieldtype": "Link",
+   "label": "Issued to",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Full Description/Specification"
+  },
+  {
+   "fieldname": "serial_number",
+   "fieldtype": "Data",
+   "label": "Serial Number"
+  },
+  {
+   "fieldname": "column_break_batt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vqkh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "supporting_documents",
+   "fieldtype": "Attach",
+   "label": "Supporting Document/s"
+  },
+  {
+   "fieldname": "par_no",
+   "fieldtype": "Data",
+   "label": "Property Acknowledgement Receipt No."
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Brand",
+   "options": "Asset Brand"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Model",
+   "options": "Asset Model"
+  },
+  {
+   "default": "0",
+   "fieldname": "deployable",
+   "fieldtype": "Check",
+   "label": "Deployable?"
+  },
+  {
+   "description": "in cubic meter",
+   "fieldname": "dimension",
+   "fieldtype": "Data",
+   "label": "Dimension (LxWxH)"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "dimension_section",
+   "fieldtype": "Section Break",
+   "label": "Dimension in Meter"
+  },
+  {
+   "fieldname": "length",
+   "fieldtype": "Data",
+   "label": "Length"
+  },
+  {
+   "fieldname": "width",
+   "fieldtype": "Data",
+   "label": "Width"
+  },
+  {
+   "description": "in meter",
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "column_break_fztj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "general_services_division_section",
+   "fieldtype": "Section Break",
+   "label": "General Services Division"
+  },
+  {
+   "fieldname": "column_break_agax",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yhgp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "asset_entry_section",
+   "fieldtype": "Section Break",
+   "label": "Asset Entry"
+  },
+  {
+   "fieldname": "asset_classification",
+   "fieldtype": "Link",
+   "label": "Asset Classification",
+   "options": "Asset Classification"
+  },
+  {
+   "fieldname": "asset_category",
+   "fieldtype": "Link",
+   "label": "Asset Category",
+   "options": "Asset Category"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_set",
+   "fieldtype": "Check",
+   "label": "Is Set?"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nAvailable\nDeployed\nGatepass Out\nUnder Maintenance\nSurrendered"
+  },
+  {
+   "fieldname": "asset_items",
+   "fieldtype": "Table",
+   "label": "Asset Items",
+   "options": "Asset Items"
+  },
+  {
+   "fieldname": "asset_location",
+   "fieldtype": "Link",
+   "label": "Asset Location",
+   "options": "Asset Location"
+  },
+  {
+   "fieldname": "asset_location_details",
+   "fieldtype": "Data",
+   "label": "Asset Location Details"
+  },
+  {
+   "fieldname": "description_summary",
+   "fieldtype": "Text",
+   "label": "Description Summary"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "Unit of Measure",
+   "options": "UOM"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "attached_items_section",
+   "fieldtype": "Section Break",
+   "label": "Attached Items"
+  },
+  {
+   "fieldname": "asset_name",
+   "fieldtype": "Read Only",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Asset Name"
+  },
+  {
+   "fieldname": "for_gatepass_details_section",
+   "fieldtype": "Section Break",
+   "label": "For Gatepass Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-27 12:54:49.519166",
+ "modified_by": "Administrator",
+ "module": "Assets",
+ "name": "Asset",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

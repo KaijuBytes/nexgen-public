@@ -1,0 +1,172 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-19 11:22:09.866283",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "log_icon",
+  "dt_control_number",
+  "document_tracker_title",
+  "date",
+  "time",
+  "from",
+  "to",
+  "created_by",
+  "last_modified_by",
+  "attach_nuar",
+  "column_break_rwzx",
+  "tracker_status",
+  "received_by",
+  "time_and_date_received",
+  "endorsed_to",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "received_by",
+   "fieldtype": "Link",
+   "label": "Received By",
+   "options": "Document Receiver"
+  },
+  {
+   "fieldname": "endorsed_to",
+   "fieldtype": "Link",
+   "label": "Endorsed To",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text Editor",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_rwzx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Link",
+   "label": "From",
+   "options": "Office Abbreviation"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Link",
+   "label": "To",
+   "options": "Office Abbreviation"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Autocomplete",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "description": "Updated Documents",
+   "fieldname": "attach_nuar",
+   "fieldtype": "Attach"
+  },
+  {
+   "fieldname": "dt_control_number",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Document Tracker CN",
+   "options": "Document Tracker",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Document Tracker Logs",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "tracker_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tracker Status",
+   "options": "\nOn-going\nDone\nOutgoing\nIncoming",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "dt_control_number.title",
+   "fieldname": "document_tracker_title",
+   "fieldtype": "Autocomplete",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Document Tracker Title",
+   "options": "Document Tracker",
+   "read_only": 1
+  },
+  {
+   "fieldname": "log_icon",
+   "fieldtype": "Autocomplete",
+   "label": "Log Icon",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_modified_by",
+   "fieldtype": "Autocomplete",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Last Modified By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "time_and_date_received",
+   "fieldtype": "Datetime",
+   "label": "Time and Date Received"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-26 15:35:48.856752",
+ "modified_by": "Administrator",
+ "module": "Documents",
+ "name": "Document Tracker Logs",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,292 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-02-04 07:11:14.298689",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "employee_name",
+  "employee",
+  "salutation",
+  "first_name",
+  "middle_name",
+  "last_name",
+  "column_break_gnak",
+  "sex_birth",
+  "gender",
+  "date_of_birth",
+  "column_break_mgwb",
+  "position_title",
+  "date_of_joining",
+  "employment_type",
+  "status",
+  "section_break_scrx",
+  "user_id",
+  "column_break_iemv",
+  "email",
+  "contact_number",
+  "company_details_section",
+  "agency_name",
+  "bureauservices",
+  "division",
+  "section",
+  "office_abbreviation",
+  "column_break_azvx",
+  "designation",
+  "reports_to",
+  "column_break_sjrg",
+  "employee_number",
+  "trainings_acquired_tab",
+  "training_history",
+  "inventory_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Employee",
+   "no_copy": 1,
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_gnak",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mgwb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Last Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "salutation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Salutation",
+   "options": "Salutation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_joining",
+   "fieldtype": "Date",
+   "label": "Date of Joining"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nSuspended\nLeft"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "is_virtual": 1,
+   "label": "Full Name",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "User ID",
+   "options": "User"
+  },
+  {
+   "fieldname": "bureauservices",
+   "fieldtype": "Link",
+   "label": "Bureau/Services",
+   "options": "Bureau"
+  },
+  {
+   "fieldname": "division",
+   "fieldtype": "Link",
+   "label": "Division",
+   "options": "Division"
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "label": "Section",
+   "options": "Division Section"
+  },
+  {
+   "fieldname": "employment_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employment Type",
+   "options": "\nPlantilla\nJob Order"
+  },
+  {
+   "fieldname": "employee_number",
+   "fieldtype": "Data",
+   "label": "Employee Number"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "reports_to",
+   "fieldtype": "Link",
+   "label": "Reports to",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "office_abbreviation",
+   "fieldtype": "Link",
+   "label": "Office Abbreviation",
+   "options": "Office Abbreviation"
+  },
+  {
+   "fieldname": "section_break_scrx",
+   "fieldtype": "Section Break",
+   "label": "User Details"
+  },
+  {
+   "fieldname": "company_details_section",
+   "fieldtype": "Section Break",
+   "label": "Company Details"
+  },
+  {
+   "fieldname": "column_break_azvx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_sjrg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_iemv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "agency_name",
+   "fieldtype": "Link",
+   "label": "Company/Agency",
+   "options": "Agency"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "sex_birth",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sex Designated at Birth",
+   "options": "\nMale\nFemale",
+   "reqd": 1
+  },
+  {
+   "fieldname": "position_title",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Position Title",
+   "options": "Position Title"
+  },
+  {
+   "fieldname": "trainings_acquired_tab",
+   "fieldtype": "Tab Break",
+   "label": "Trainings Acquired",
+   "read_only": 1
+  },
+  {
+   "fieldname": "inventory_tab",
+   "fieldtype": "Tab Break",
+   "label": "Inventory"
+  },
+  {
+   "fieldname": "training_history",
+   "fieldtype": "Table",
+   "label": "Training History",
+   "options": "Employee Training"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": " Naming Series",
+   "options": "\nDRRMD-.YYYY.-.##."
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-18 14:37:45.648334",
+ "modified_by": "Administrator",
+ "module": "Human Resources",
+ "name": "Employee",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "employee_name",
+ "track_changes": 1
+}

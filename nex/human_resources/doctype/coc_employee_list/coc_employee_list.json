@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-04 14:48:55.558947",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_name",
+  "coc_type",
+  "holiday_year",
+  "date_of_coc_earned",
+  "is_deployment",
+  "earned_hours"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Link",
+   "label": "Employee Name",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "date_of_coc_earned",
+   "fieldtype": "Date",
+   "label": "Date of COC Earned"
+  },
+  {
+   "fieldname": "coc_type",
+   "fieldtype": "Select",
+   "label": "COC Type",
+   "options": "\nHoliday\nRest Day"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_deployment",
+   "fieldtype": "Check",
+   "label": "Deployment?"
+  },
+  {
+   "fieldname": "earned_hours",
+   "fieldtype": "Int",
+   "label": "Earned Hours",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "holiday_year",
+   "fieldtype": "Link",
+   "label": "Holiday Year",
+   "options": "Holiday List"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-20 15:33:51.364164",
+ "modified_by": "Administrator",
+ "module": "Human Resources",
+ "name": "COC Employee List",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

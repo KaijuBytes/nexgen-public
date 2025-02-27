@@ -1,0 +1,131 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-24 07:59:02.130408",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "asset_number",
+  "subject",
+  "log_date",
+  "description",
+  "column_break_teuf",
+  "status",
+  "type_of_log",
+  "location_update",
+  "location_details_update",
+  "created_by",
+  "last_modified_by",
+  "amended_from",
+  "gatepass"
+ ],
+ "fields": [
+  {
+   "fieldname": "asset_number",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Asset Number",
+   "options": "Asset",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_teuf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nOpen\nReplied\nOn Hold\nResolved\nClosed"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Read Only",
+   "label": "Created by"
+  },
+  {
+   "fieldname": "location_update",
+   "fieldtype": "Link",
+   "label": "Location Update",
+   "options": "Asset Location"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Asset Logs",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "location_details_update",
+   "fieldtype": "Data",
+   "label": "Location Details Update"
+  },
+  {
+   "fieldname": "type_of_log",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of Log",
+   "options": "\nGatepass In\nGatepass Out\nMaintenance/Repair\nSurrendered",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_modified_by",
+   "fieldtype": "Read Only",
+   "label": "Last Modified by"
+  },
+  {
+   "fieldname": "gatepass",
+   "fieldtype": "Link",
+   "label": "Gatepass",
+   "options": "Gatepass"
+  },
+  {
+   "fieldname": "log_date",
+   "fieldtype": "Date",
+   "label": "Log Date",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-27 12:56:09.037307",
+ "modified_by": "Administrator",
+ "module": "Assets",
+ "name": "Asset Logs",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

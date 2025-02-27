@@ -1,0 +1,80 @@
+{
+ "app": "nex",
+ "charts": [],
+ "content": "[{\"id\":\"Zb3o-HwdoW\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Document</span>\",\"col\":12}},{\"id\":\"Kachu5mvUv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tracker\",\"col\":3}},{\"id\":\"Q9aS0Us8GK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tracker Logs\",\"col\":4}},{\"id\":\"p9JfSqlP6J\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Records\",\"col\":3}},{\"id\":\"x4kLJ4f6eK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"6Kpx-AxtDJ\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"H4dHddsZFx\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
+ "creation": "2025-02-17 10:01:26.179225",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "folder-normal",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Document",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Record Disposition Schedule",
+   "link_count": 0,
+   "link_to": "GRDS",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-02-25 14:48:37.317151",
+ "modified_by": "Administrator",
+ "module": "Documents",
+ "name": "Document",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 25.0,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "format": "{} Active",
+   "label": "Records",
+   "link_to": "Records",
+   "stats_filter": "[[\"Records\",\"status\",\"=\",\"Active\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "format": "{} On-going",
+   "label": "Tracker",
+   "link_to": "Document Tracker",
+   "stats_filter": "[[\"Document Tracker\",\"status\",\"=\",\"Ongoing\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "format": "{} Ongoing",
+   "label": "Tracker Logs",
+   "link_to": "Document Tracker Logs",
+   "stats_filter": "[[\"Document Tracker Logs\",\"tracker_status\",\"=\",\"On-going\",false]]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Document",
+ "type": "Workspace"
+}

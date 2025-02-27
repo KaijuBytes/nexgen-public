@@ -1,0 +1,173 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "DRRMD-TO-.YYYY.-.#####",
+ "creation": "2025-02-03 16:43:23.522244",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_vjnd",
+  "created_by",
+  "amended_from",
+  "travel_type",
+  "destination",
+  "purpose_travel",
+  "column_break_oofk",
+  "start_date",
+  "end_date",
+  "invitation",
+  "to_approver",
+  "approver_position_title",
+  "approver_office",
+  "section_break_cmuh",
+  "list_of_employee",
+  "section_break_orwb",
+  "travel_expenses",
+  "section_break_uorc",
+  "to_remarks",
+  "column_break_uxon"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_vjnd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Travel Order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "travel_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Travel Type",
+   "options": "Local\nInternational"
+  },
+  {
+   "fieldname": "destination",
+   "fieldtype": "Data",
+   "label": "Destination"
+  },
+  {
+   "fieldname": "purpose_travel",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Purpose of the Travel"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "invitation",
+   "fieldtype": "Attach",
+   "label": "Copy of Invitation/Announcement"
+  },
+  {
+   "fieldname": "list_of_employee",
+   "fieldtype": "Table",
+   "label": "List of Employee",
+   "options": "Travel Order Employee List",
+   "reqd": 1
+  },
+  {
+   "fieldname": "travel_expenses",
+   "fieldtype": "Table",
+   "label": "Travel Expenses",
+   "options": "Expense Matrix"
+  },
+  {
+   "default": "\n",
+   "fieldname": "to_remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks/Special Instructions"
+  },
+  {
+   "fieldname": "column_break_oofk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_cmuh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_orwb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_uorc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Created By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "to_approver",
+   "fieldtype": "Link",
+   "label": "TO Approver",
+   "options": "Document Signatory"
+  },
+  {
+   "fetch_from": "to_approver.position_title",
+   "fieldname": "approver_position_title",
+   "fieldtype": "Link",
+   "label": "Position Title",
+   "options": "Position Title"
+  },
+  {
+   "fieldname": "column_break_uxon",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "to_approver.bureau_services",
+   "fieldname": "approver_office",
+   "fieldtype": "Link",
+   "label": "Office",
+   "options": "Bureau"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-24 09:18:21.837604",
+ "modified_by": "Administrator",
+ "module": "Human Resources",
+ "name": "Travel Order",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

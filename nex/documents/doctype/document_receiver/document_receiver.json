@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:dr_name",
+ "creation": "2025-02-19 13:49:54.838239",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "dr_name",
+  "is_drrmd",
+  "drrmd_personnel_name",
+  "position_title",
+  "email",
+  "contact_number",
+  "office",
+  "name_external",
+  "position_title_external",
+  "email_external",
+  "contact_number_external",
+  "office_external"
+ ],
+ "fields": [
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number"
+  },
+  {
+   "fetch_from": "drrmd_personnel_name.office_abbreviation",
+   "fieldname": "office",
+   "fieldtype": "Link",
+   "label": "Office",
+   "options": "Office Abbreviation"
+  },
+  {
+   "fieldname": "name_external",
+   "fieldtype": "Data",
+   "label": "Name (External)"
+  },
+  {
+   "fieldname": "position_title_external",
+   "fieldtype": "Link",
+   "label": "Position Title (External)",
+   "options": "Position Title"
+  },
+  {
+   "fieldname": "email_external",
+   "fieldtype": "Data",
+   "label": "Email (External)"
+  },
+  {
+   "fieldname": "contact_number_external",
+   "fieldtype": "Data",
+   "label": "Contact Number (External)"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_drrmd",
+   "fieldtype": "Check",
+   "label": "Is DRRMD Personnel"
+  },
+  {
+   "fieldname": "dr_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "drrmd_personnel_name",
+   "fieldtype": "Link",
+   "label": "DRRMD Personnel Name",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "drrmd_personnel_name.position_title",
+   "fieldname": "position_title",
+   "fieldtype": "Link",
+   "label": "Position Title",
+   "options": "Position Title"
+  },
+  {
+   "fieldname": "office_external",
+   "fieldtype": "Link",
+   "label": "Office (External)",
+   "options": "Office Abbreviation"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-19 15:11:03.557665",
+ "modified_by": "Administrator",
+ "module": "Documents",
+ "name": "Document Receiver",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

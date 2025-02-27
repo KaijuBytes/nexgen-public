@@ -1,0 +1,23 @@
+{
+ "color": "#ff0000",
+ "creation": "2025-02-21 07:45:15.247825",
+ "currency": "",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Document Tracker",
+ "filters_json": "[[\"Document Tracker\",\"status\",\"=\",\"Ongoing\",false]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "label": "Tracker Ongoing",
+ "modified": "2025-02-21 10:13:17.804229",
+ "modified_by": "Administrator",
+ "module": "Documents",
+ "name": "Tracker Active",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}

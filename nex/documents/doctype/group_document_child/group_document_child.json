@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-27 09:50:37.973434",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "record",
+  "title",
+  "record_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "record",
+   "fieldtype": "Link",
+   "label": "Record",
+   "options": "Records"
+  },
+  {
+   "fetch_from": "record.record_type",
+   "fieldname": "record_type",
+   "fieldtype": "Link",
+   "label": "Record Type",
+   "options": "Records"
+  },
+  {
+   "fetch_from": "record.title",
+   "fieldname": "title",
+   "fieldtype": "Link",
+   "label": "Title",
+   "options": "Records"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-27 09:59:19.961995",
+ "modified_by": "Administrator",
+ "module": "Documents",
+ "name": "Group Document Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

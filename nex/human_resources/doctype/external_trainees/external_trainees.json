@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-07 14:06:36.669043",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "status",
+  "position_title",
+  "office",
+  "attendance"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "External Trainee Names"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nInvited\nCompleted\nFeedback Submitted"
+  },
+  {
+   "fieldname": "attendance",
+   "fieldtype": "Select",
+   "label": "Attendance",
+   "options": "Present\nAbsent"
+  },
+  {
+   "fetch_from": "employee.position_title",
+   "fieldname": "position_title",
+   "fieldtype": "Link",
+   "label": "Position Title",
+   "options": "Position Title"
+  },
+  {
+   "fetch_from": "employee.office_abbreviation",
+   "fieldname": "office",
+   "fieldtype": "Link",
+   "label": "Office",
+   "options": "Agency"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-07 14:13:00.138856",
+ "modified_by": "Administrator",
+ "module": "Human Resources",
+ "name": "External Trainees",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

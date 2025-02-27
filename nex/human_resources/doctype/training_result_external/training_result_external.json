@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "creation": "2025-02-19 09:29:22.798897",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "exttrainee_name",
+  "column_break_2",
+  "trainee_name",
+  "agency_name",
+  "section_break_5",
+  "hours",
+  "grade",
+  "column_break_7",
+  "comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Hours"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "grade",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Grade"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "comments",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Comments"
+  },
+  {
+   "fieldname": "exttrainee_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "External Trainee Name",
+   "options": "External Trainee Names"
+  },
+  {
+   "fetch_from": "exttrainee_name.agency_name",
+   "fieldname": "agency_name",
+   "fieldtype": "Link",
+   "label": "Agency",
+   "options": "Agency",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "exttrainee_name.exttrainee_name",
+   "fieldname": "trainee_name",
+   "fieldtype": "Read Only",
+   "label": "External Trainee Name"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-19 09:35:00.231948",
+ "modified_by": "Administrator",
+ "module": "Human Resources",
+ "name": "Training Result External",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:training_program",
+ "creation": "2017-10-11 04:43:17.230065",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "training_program",
+  "column_break_3",
+  "trainings",
+  "section_break_11",
+  "description",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "training_program",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Training Program",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Training Program",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "trainings",
+   "fieldtype": "Table MultiSelect",
+   "label": "Training/s",
+   "options": "Training MultiSelect"
+  }
+ ],
+ "links": [],
+ "modified": "2025-02-18 16:02:04.395110",
+ "modified_by": "Administrator",
+ "module": "Human Resources",
+ "name": "Training Program",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "training_program",
+ "track_changes": 1
+}

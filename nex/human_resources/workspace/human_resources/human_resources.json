@@ -1,0 +1,131 @@
+{
+ "app": "nex",
+ "charts": [],
+ "content": "[{\"id\":\"zjFY31dNdT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Human Resources</span>\",\"col\":12}},{\"id\":\"4vzDYCBdWV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee\",\"col\":3}},{\"id\":\"h_dpcMAOf_\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"jPFMoCzZkr\",\"type\":\"card\",\"data\":{\"card_name\":\"Training\",\"col\":4}},{\"id\":\"ZEzjadHyZT\",\"type\":\"card\",\"data\":{\"card_name\":\"Documents & Requests\",\"col\":4}}]",
+ "creation": "2025-02-13 14:56:17.061270",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "organization",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Human Resources",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Training",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Training Event",
+   "link_count": 0,
+   "link_to": "Training Event",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Training Program",
+   "link_count": 0,
+   "link_to": "Training Program",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Training Name",
+   "link_count": 0,
+   "link_to": "Training Name",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Training Type",
+   "link_count": 0,
+   "link_to": "Training Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Documents & Requests",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Travel Order",
+   "link_count": 0,
+   "link_to": "Travel Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Compensatory Overtime Credits",
+   "link_count": 0,
+   "link_to": "Compensatory Overtime Credits",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Compensatory Time-Off Request",
+   "link_count": 0,
+   "link_to": "Compensatory Time-Off Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-02-17 13:18:14.194253",
+ "modified_by": "Administrator",
+ "module": "Human Resources",
+ "name": "Human Resources",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 24.0,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "format": "{} Active",
+   "label": "Employee",
+   "link_to": "Employee",
+   "stats_filter": "[[\"Employee\",\"status\",\"=\",\"Active\",false]]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Human Resources",
+ "type": "Workspace"
+}

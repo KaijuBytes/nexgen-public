@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-13 12:19:18.984951",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_name",
+  "item_brand",
+  "item_model",
+  "serial",
+  "asset_classification",
+  "asset_category",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "asset_classification",
+   "fieldtype": "Link",
+   "label": "Asset Classification",
+   "options": "Asset Classification"
+  },
+  {
+   "fieldname": "asset_category",
+   "fieldtype": "Link",
+   "label": "Asset Category",
+   "options": "Asset Category"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "serial",
+   "fieldtype": "Data",
+   "label": "Serial"
+  },
+  {
+   "fieldname": "item_brand",
+   "fieldtype": "Link",
+   "label": "Item Brand",
+   "options": "Asset Brand"
+  },
+  {
+   "fieldname": "item_model",
+   "fieldtype": "Link",
+   "label": "Item Model",
+   "options": "Asset Model"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-25 07:28:48.535214",
+ "modified_by": "Administrator",
+ "module": "Assets",
+ "name": "Asset Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

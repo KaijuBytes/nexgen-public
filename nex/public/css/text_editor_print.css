@@ -1,0 +1,10 @@
+    /* For Quill Editor */
+    .ql-editor {
+        font-family: 'Palatino Linotype', 'Palatino', serif !important;
+    }
+
+    /* For TinyMCE (if used) */
+    .mce-content-body {
+        font-family: 'Palatino Linotype', 'Palatino', serif !important;
+    }
+
