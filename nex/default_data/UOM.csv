@@ -1,0 +1,240 @@
+Column Labels:,ID,UOM Name,Created On,Created By,Enabled,Must be Whole Number
+,"""Unit""",Unit,34:26.9,Administrator,1,1
+,"""Box""",Box,34:26.9,Administrator,1,1
+,"""Nos""",Nos,34:26.9,Administrator,1,1
+,"""Pair""",Pair,34:26.9,Administrator,1,1
+,"""Set""",Set,34:26.9,Administrator,1,1
+,"""Meter""",Meter,34:26.9,Administrator,1,0
+,"""Barleycorn""",Barleycorn,34:26.9,Administrator,1,0
+,"""Calibre""",Calibre,34:26.9,Administrator,1,0
+,"""Cable Length (UK)""",Cable Length (UK),34:26.9,Administrator,1,0
+,"""Cable Length (US)""",Cable Length (US),34:26.9,Administrator,1,0
+,"""Cable Length""",Cable Length,34:26.9,Administrator,1,0
+,"""Centimeter""",Centimeter,34:26.9,Administrator,1,0
+,"""Chain""",Chain,34:26.9,Administrator,1,0
+,"""Decimeter""",Decimeter,34:26.9,Administrator,1,0
+,"""Ells (UK)""",Ells (UK),34:26.9,Administrator,1,0
+,"""Ems(Pica)""",Ems(Pica),34:26.9,Administrator,1,0
+,"""Fathom""",Fathom,34:26.9,Administrator,1,0
+,"""Foot""",Foot,34:26.9,Administrator,1,0
+,"""Furlong""",Furlong,34:26.9,Administrator,1,0
+,"""Hand""",Hand,34:26.9,Administrator,1,0
+,"""Hectometer""",Hectometer,34:26.9,Administrator,1,0
+,"""Inch""",Inch,34:26.9,Administrator,1,0
+,"""Kilometer""",Kilometer,34:26.9,Administrator,1,0
+,"""Link""",Link,34:26.9,Administrator,1,0
+,"""Micrometer""",Micrometer,34:26.9,Administrator,1,0
+,"""Mile""",Mile,34:26.9,Administrator,1,0
+,"""Mile (Nautical)""",Mile (Nautical),34:27.0,Administrator,1,0
+,"""Millimeter""",Millimeter,34:27.0,Administrator,1,0
+,"""Nanometer""",Nanometer,34:27.0,Administrator,1,0
+,"""Rod""",Rod,34:27.0,Administrator,1,0
+,"""Vara""",Vara,34:27.0,Administrator,1,0
+,"""Versta""",Versta,34:27.0,Administrator,1,0
+,"""Yard""",Yard,34:27.0,Administrator,1,0
+,"""Arshin""",Arshin,34:27.0,Administrator,1,0
+,"""Sazhen""",Sazhen,34:27.0,Administrator,1,0
+,"""Medio Metro""",Medio Metro,34:27.0,Administrator,1,0
+,"""Square Meter""",Square Meter,34:27.0,Administrator,1,0
+,"""Centiarea""",Centiarea,34:27.0,Administrator,1,0
+,"""Area""",Area,34:27.0,Administrator,1,0
+,"""Manzana""",Manzana,34:27.0,Administrator,1,0
+,"""Caballeria""",Caballeria,34:27.0,Administrator,1,0
+,"""Square Kilometer""",Square Kilometer,34:27.0,Administrator,1,0
+,"""Are""",Are,34:27.0,Administrator,1,0
+,"""Acre""",Acre,34:27.0,Administrator,1,0
+,"""Acre (US)""",Acre (US),34:27.0,Administrator,1,0
+,"""Hectare""",Hectare,34:27.0,Administrator,1,0
+,"""Square Yard""",Square Yard,34:27.0,Administrator,1,0
+,"""Square Foot""",Square Foot,34:27.0,Administrator,1,0
+,"""Square Inch""",Square Inch,34:27.0,Administrator,1,0
+,"""Square Centimeter""",Square Centimeter,34:27.0,Administrator,1,0
+,"""Square Mile""",Square Mile,34:27.0,Administrator,1,0
+,"""Meter/Second""",Meter/Second,34:27.0,Administrator,1,0
+,"""Inch/Minute""",Inch/Minute,34:27.0,Administrator,1,0
+,"""Foot/Minute""",Foot/Minute,34:27.0,Administrator,1,0
+,"""Inch/Second""",Inch/Second,34:27.0,Administrator,1,0
+,"""Kilometer/Hour""",Kilometer/Hour,34:27.0,Administrator,1,0
+,"""Foot/Second""",Foot/Second,34:27.0,Administrator,1,0
+,"""Mile/Hour""",Mile/Hour,34:27.0,Administrator,1,0
+,"""Knot""",Knot,34:27.0,Administrator,1,0
+,"""Mile/Minute""",Mile/Minute,34:27.0,Administrator,1,0
+,"""Mile/Second""",Mile/Second,34:27.0,Administrator,1,0
+,"""Carat""",Carat,34:27.0,Administrator,1,0
+,"""Cental""",Cental,34:27.0,Administrator,1,0
+,"""Dram""",Dram,34:27.0,Administrator,1,0
+,"""Grain""",Grain,34:27.0,Administrator,1,0
+,"""Gram""",Gram,34:27.0,Administrator,1,0
+,"""Hundredweight (UK)""",Hundredweight (UK),34:27.0,Administrator,1,0
+,"""Hundredweight (US)""",Hundredweight (US),34:27.0,Administrator,1,0
+,"""Quintal""",Quintal,34:27.0,Administrator,1,0
+,"""Kg""",Kg,34:27.0,Administrator,1,0
+,"""Microgram""",Microgram,34:27.0,Administrator,1,0
+,"""Milligram""",Milligram,34:27.0,Administrator,1,0
+,"""Ounce""",Ounce,34:27.0,Administrator,1,0
+,"""Pood""",Pood,34:27.0,Administrator,1,0
+,"""Pound""",Pound,34:27.0,Administrator,1,0
+,"""Slug""",Slug,34:27.0,Administrator,1,0
+,"""Stone""",Stone,34:27.0,Administrator,1,0
+,"""Tonne""",Tonne,34:27.0,Administrator,1,0
+,"""Kip""",Kip,34:27.0,Administrator,1,0
+,"""Barrel(Beer)""",Barrel(Beer),34:27.0,Administrator,1,0
+,"""Barrel (Oil)""",Barrel (Oil),34:27.0,Administrator,1,0
+,"""Bushel (UK)""",Bushel (UK),34:27.0,Administrator,1,0
+,"""Bushel (US Dry Level)""",Bushel (US Dry Level),34:27.0,Administrator,1,0
+,"""Centilitre""",Centilitre,34:27.0,Administrator,1,0
+,"""Cubic Centimeter""",Cubic Centimeter,34:27.0,Administrator,1,0
+,"""Cubic Decimeter""",Cubic Decimeter,34:27.0,Administrator,1,0
+,"""Cubic Foot""",Cubic Foot,34:27.0,Administrator,1,0
+,"""Cubic Inch""",Cubic Inch,34:27.1,Administrator,1,0
+,"""Cubic Meter""",Cubic Meter,34:27.1,Administrator,1,0
+,"""Cubic Millimeter""",Cubic Millimeter,34:27.1,Administrator,1,0
+,"""Cubic Yard""",Cubic Yard,34:27.1,Administrator,1,0
+,"""Cup""",Cup,34:27.1,Administrator,1,0
+,"""Decilitre""",Decilitre,34:27.1,Administrator,1,0
+,"""Fluid Ounce (UK)""",Fluid Ounce (UK),34:27.1,Administrator,1,0
+,"""Fluid Ounce (US)""",Fluid Ounce (US),34:27.1,Administrator,1,0
+,"""Gallon (UK)""",Gallon (UK),34:27.1,Administrator,1,0
+,"""Gallon Dry (US)""",Gallon Dry (US),34:27.1,Administrator,1,0
+,"""Gallon Liquid (US)""",Gallon Liquid (US),34:27.1,Administrator,1,0
+,"""Litre""",Litre,34:27.1,Administrator,1,0
+,"""Millilitre""",Millilitre,34:27.1,Administrator,1,0
+,"""Peck""",Peck,34:27.1,Administrator,1,0
+,"""Pint (UK)""",Pint (UK),34:27.1,Administrator,1,0
+,"""Pint, Dry (US)""","Pint, Dry (US)",34:27.1,Administrator,1,0
+,"""Pint, Liquid (US)""","Pint, Liquid (US)",34:27.1,Administrator,1,0
+,"""Quart (UK)""",Quart (UK),34:27.1,Administrator,1,0
+,"""Quart Dry (US)""",Quart Dry (US),34:27.1,Administrator,1,0
+,"""Quart Liquid (US)""",Quart Liquid (US),34:27.1,Administrator,1,0
+,"""Tablespoon (US)""",Tablespoon (US),34:27.1,Administrator,1,0
+,"""Teaspoon""",Teaspoon,34:27.1,Administrator,1,0
+,"""Day""",Day,34:27.1,Administrator,1,0
+,"""Hour""",Hour,34:27.1,Administrator,1,0
+,"""Minute""",Minute,34:27.1,Administrator,1,0
+,"""Second""",Second,34:27.1,Administrator,1,0
+,"""Millisecond""",Millisecond,34:27.1,Administrator,1,0
+,"""Microsecond""",Microsecond,34:27.1,Administrator,1,0
+,"""Nanosecond""",Nanosecond,34:27.1,Administrator,1,0
+,"""Week""",Week,34:27.1,Administrator,1,0
+,"""Atmosphere""",Atmosphere,34:27.1,Administrator,1,0
+,"""Pascal""",Pascal,34:27.1,Administrator,1,0
+,"""Bar""",Bar,34:27.1,Administrator,1,0
+,"""Foot Of Water""",Foot Of Water,34:27.1,Administrator,1,0
+,"""Hectopascal""",Hectopascal,34:27.1,Administrator,1,0
+,"""Iches Of Water""",Iches Of Water,34:27.1,Administrator,1,0
+,"""Inches Of Mercury""",Inches Of Mercury,34:27.1,Administrator,1,0
+,"""Kilopascal""",Kilopascal,34:27.1,Administrator,1,0
+,"""Meter Of Water""",Meter Of Water,34:27.1,Administrator,1,0
+,"""Microbar""",Microbar,34:27.1,Administrator,1,0
+,"""Milibar""",Milibar,34:27.1,Administrator,1,0
+,"""Millimeter Of Mercury""",Millimeter Of Mercury,34:27.1,Administrator,1,0
+,"""Millimeter Of Water""",Millimeter Of Water,34:27.1,Administrator,1,0
+,"""Technical Atmosphere""",Technical Atmosphere,34:27.1,Administrator,1,0
+,"""Torr""",Torr,34:27.1,Administrator,1,0
+,"""Dyne""",Dyne,34:27.1,Administrator,1,0
+,"""Gram-Force""",Gram-Force,34:27.1,Administrator,1,0
+,"""Joule/Meter""",Joule/Meter,34:27.1,Administrator,1,0
+,"""Kilogram-Force""",Kilogram-Force,34:27.1,Administrator,1,0
+,"""Kilopond""",Kilopond,34:27.1,Administrator,1,0
+,"""Kilopound-Force""",Kilopound-Force,34:27.1,Administrator,1,0
+,"""Newton""",Newton,34:27.1,Administrator,1,0
+,"""Ounce-Force""",Ounce-Force,34:27.1,Administrator,1,0
+,"""Pond""",Pond,34:27.1,Administrator,1,0
+,"""Pound-Force""",Pound-Force,34:27.1,Administrator,1,0
+,"""Poundal""",Poundal,34:27.1,Administrator,1,0
+,"""Tonne-Force(Metric)""",Tonne-Force(Metric),34:27.2,Administrator,1,0
+,"""Ton-Force (UK)""",Ton-Force (UK),34:27.2,Administrator,1,0
+,"""Ton-Force (US)""",Ton-Force (US),34:27.2,Administrator,1,0
+,"""Btu (It)""",Btu (It),34:27.2,Administrator,1,0
+,"""Btu (Th)""",Btu (Th),34:27.2,Administrator,1,0
+,"""Btu (Mean)""",Btu (Mean),34:27.2,Administrator,1,0
+,"""Calorie (It)""",Calorie (It),34:27.2,Administrator,1,0
+,"""Calorie (Th)""",Calorie (Th),34:27.2,Administrator,1,0
+,"""Calorie (Mean)""",Calorie (Mean),34:27.2,Administrator,1,0
+,"""Calorie (Food)""",Calorie (Food),34:27.2,Administrator,1,0
+,"""Erg""",Erg,34:27.2,Administrator,1,0
+,"""Horsepower-Hours""",Horsepower-Hours,34:27.2,Administrator,1,0
+,"""Inch Pound-Force""",Inch Pound-Force,34:27.2,Administrator,1,0
+,"""Joule""",Joule,34:27.2,Administrator,1,0
+,"""Kilojoule""",Kilojoule,34:27.2,Administrator,1,0
+,"""Kilocalorie""",Kilocalorie,34:27.2,Administrator,1,0
+,"""Kilowatt-Hour""",Kilowatt-Hour,34:27.2,Administrator,1,0
+,"""Litre-Atmosphere""",Litre-Atmosphere,34:27.2,Administrator,1,0
+,"""Megajoule""",Megajoule,34:27.2,Administrator,1,0
+,"""Watt-Hour""",Watt-Hour,34:27.2,Administrator,1,0
+,"""Btu/Hour""",Btu/Hour,34:27.2,Administrator,1,0
+,"""Btu/Minutes""",Btu/Minutes,34:27.2,Administrator,1,0
+,"""Btu/Seconds""",Btu/Seconds,34:27.2,Administrator,1,0
+,"""Calorie/Seconds""",Calorie/Seconds,34:27.2,Administrator,1,0
+,"""Horsepower""",Horsepower,34:27.2,Administrator,1,0
+,"""Kilowatt""",Kilowatt,34:27.2,Administrator,1,0
+,"""Megawatt""",Megawatt,34:27.2,Administrator,1,0
+,"""Volt-Ampere""",Volt-Ampere,34:27.2,Administrator,1,0
+,"""Watt""",Watt,34:27.2,Administrator,1,0
+,"""Centigram/Litre""",Centigram/Litre,34:27.2,Administrator,1,0
+,"""Decigram/Litre""",Decigram/Litre,34:27.2,Administrator,1,0
+,"""Dekagram/Litre""",Dekagram/Litre,34:27.2,Administrator,1,0
+,"""Hectogram/Litre""",Hectogram/Litre,34:27.2,Administrator,1,0
+,"""Gram/Cubic Meter""",Gram/Cubic Meter,34:27.2,Administrator,1,0
+,"""Gram/Cubic Centimeter""",Gram/Cubic Centimeter,34:27.2,Administrator,1,0
+,"""Gram/Cubic Millimeter""",Gram/Cubic Millimeter,34:27.2,Administrator,1,0
+,"""Gram/Litre""",Gram/Litre,34:27.2,Administrator,1,0
+,"""Grain/Gallon (US)""",Grain/Gallon (US),34:27.2,Administrator,1,0
+,"""Grain/Gallon (UK)""",Grain/Gallon (UK),34:27.2,Administrator,1,0
+,"""Grain/Cubic Foot""",Grain/Cubic Foot,34:27.2,Administrator,1,0
+,"""Kilogram/Cubic Meter""",Kilogram/Cubic Meter,34:27.2,Administrator,1,0
+,"""Kilogram/Cubic Centimeter""",Kilogram/Cubic Centimeter,34:27.2,Administrator,1,0
+,"""Kilogram/Litre""",Kilogram/Litre,34:27.2,Administrator,1,0
+,"""Milligram/Cubic Meter""",Milligram/Cubic Meter,34:27.2,Administrator,1,0
+,"""Milligram/Cubic Centimeter""",Milligram/Cubic Centimeter,34:27.2,Administrator,1,0
+,"""Milligram/Cubic Millimeter""",Milligram/Cubic Millimeter,34:27.2,Administrator,1,0
+,"""Megagram/Litre""",Megagram/Litre,34:27.2,Administrator,1,0
+,"""Milligram/Litre""",Milligram/Litre,34:27.2,Administrator,1,0
+,"""Microgram/Litre""",Microgram/Litre,34:27.2,Administrator,1,0
+,"""Nanogram/Litre""",Nanogram/Litre,34:27.2,Administrator,1,0
+,"""Ounce/Cubic Inch""",Ounce/Cubic Inch,34:27.2,Administrator,1,0
+,"""Ounce/Cubic Foot""",Ounce/Cubic Foot,34:27.2,Administrator,1,0
+,"""Ounce/Gallon (US)""",Ounce/Gallon (US),34:27.2,Administrator,1,0
+,"""Ounce/Gallon (UK)""",Ounce/Gallon (UK),34:27.2,Administrator,1,0
+,"""Pound/Cubic Inch""",Pound/Cubic Inch,34:27.2,Administrator,1,0
+,"""Pound/Cubic Foot""",Pound/Cubic Foot,34:27.2,Administrator,1,0
+,"""Pound/Cubic Yard""",Pound/Cubic Yard,34:27.2,Administrator,1,0
+,"""Pound/Gallon (US)""",Pound/Gallon (US),34:27.2,Administrator,1,0
+,"""Pound/Gallon (UK)""",Pound/Gallon (UK),34:27.2,Administrator,1,0
+,"""Psi/1000 Feet""",Psi/1000 Feet,34:27.2,Administrator,1,0
+,"""Slug/Cubic Foot""",Slug/Cubic Foot,34:27.2,Administrator,1,0
+,"""Ton (Short)/Cubic Yard""",Ton (Short)/Cubic Yard,34:27.2,Administrator,1,0
+,"""Ton (Long)/Cubic Yard""",Ton (Long)/Cubic Yard,34:27.2,Administrator,1,0
+,"""Celsius""",Celsius,34:27.2,Administrator,1,0
+,"""Fahrenheit""",Fahrenheit,34:27.2,Administrator,1,0
+,"""Kelvin""",Kelvin,34:27.2,Administrator,1,0
+,"""Cycle/Second""",Cycle/Second,34:27.2,Administrator,1,0
+,"""Nanohertz""",Nanohertz,34:27.3,Administrator,1,0
+,"""Millihertz""",Millihertz,34:27.3,Administrator,1,0
+,"""Hertz""",Hertz,34:27.3,Administrator,1,0
+,"""Kilohertz""",Kilohertz,34:27.3,Administrator,1,0
+,"""Megahertz""",Megahertz,34:27.3,Administrator,1,0
+,"""Wavelength In Gigametres""",Wavelength In Gigametres,34:27.3,Administrator,1,0
+,"""Wavelength In Megametres""",Wavelength In Megametres,34:27.3,Administrator,1,0
+,"""Wavelength In Kilometres""",Wavelength In Kilometres,34:27.3,Administrator,1,0
+,"""Ampere-Hour""",Ampere-Hour,34:27.3,Administrator,1,0
+,"""Ampere-Minute""",Ampere-Minute,34:27.3,Administrator,1,0
+,"""Ampere-Second""",Ampere-Second,34:27.3,Administrator,1,0
+,"""Coulomb""",Coulomb,34:27.3,Administrator,1,0
+,"""EMU Of Charge""",EMU Of Charge,34:27.3,Administrator,1,0
+,"""Faraday""",Faraday,34:27.3,Administrator,1,0
+,"""Kilocoulomb""",Kilocoulomb,34:27.3,Administrator,1,0
+,"""Megacoulomb""",Megacoulomb,34:27.3,Administrator,1,0
+,"""Millicoulomb""",Millicoulomb,34:27.3,Administrator,1,0
+,"""Nanocoulomb""",Nanocoulomb,34:27.3,Administrator,1,0
+,"""Ampere""",Ampere,34:27.3,Administrator,1,0
+,"""Abampere""",Abampere,34:27.3,Administrator,1,0
+,"""Biot""",Biot,34:27.3,Administrator,1,0
+,"""EMU of current""",EMU of current,34:27.3,Administrator,1,0
+,"""Kiloampere""",Kiloampere,34:27.3,Administrator,1,0
+,"""Milliampere""",Milliampere,34:27.3,Administrator,1,0
+,"""Gamma""",Gamma,34:27.3,Administrator,1,0
+,"""Gauss""",Gauss,34:27.3,Administrator,1,0
+,"""Tesla""",Tesla,34:27.3,Administrator,1,0
+,"""Percent""",Percent,34:27.3,Administrator,1,0
+,"""Parts Per Million""",Parts Per Million,34:27.3,Administrator,1,0
