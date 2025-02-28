@@ -53,8 +53,9 @@
    "options": "Training MultiSelect"
   }
  ],
+ "grid_page_length": 50,
  "links": [],
- "modified": "2025-02-18 16:02:04.395110",
+ "modified": "2025-02-28 08:40:13.888714",
  "modified_by": "Administrator",
  "module": "Human Resources",
  "name": "Training Program",
@@ -71,8 +72,21 @@
    "role": "HR Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Human Resources User",
+   "share": 1,
+   "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "show_name_in_global_search": 1,
  "sort_field": "creation",
  "sort_order": "DESC",

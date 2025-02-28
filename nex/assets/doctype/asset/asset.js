@@ -91,3 +91,23 @@ function updateAssetName(frm) {
         frm.set_value('asset_name', null); // Clear if brand or model is missing
     }
 }
+
+frappe.ui.form.on('Asset', {
+    length: function(frm) {
+        calculate_dimension(frm);
+    },
+    width: function(frm) {
+        calculate_dimension(frm);
+    },
+    height: function(frm) {
+        calculate_dimension(frm);
+    }
+});
+
+function calculate_dimension(frm) {
+    if (frm.doc.length && frm.doc.width && frm.doc.height) {
+        frm.set_value('dimension', frm.doc.length * frm.doc.width * frm.doc.height);
+    } else {
+        frm.set_value('dimension', 0); // Or clear the field or set to null.
+    }
+}
