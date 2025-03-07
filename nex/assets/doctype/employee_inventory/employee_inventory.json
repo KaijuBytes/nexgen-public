@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-28 15:13:30.656929",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "item_name",
+  "serial_number",
+  "date_acquired",
+  "unit_value"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "serial_number",
+   "fieldtype": "Data",
+   "label": "Serial Number"
+  },
+  {
+   "fieldname": "date_acquired",
+   "fieldtype": "Date",
+   "label": "Date Acquired"
+  },
+  {
+   "fieldname": "unit_value",
+   "fieldtype": "Currency",
+   "label": "Unit Value"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-28 15:21:28.365276",
+ "modified_by": "Administrator",
+ "module": "Assets",
+ "name": "Employee Inventory",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

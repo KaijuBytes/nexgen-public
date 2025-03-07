@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:DRRMD-COCLogs-{YYYY}{MM}-{####}",
+ "creation": "2025-03-04 10:19:08.188260",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_yxdc",
+  "amended_from",
+  "created_by",
+  "holiday_year",
+  "overtime_description",
+  "employee_name",
+  "coc_type",
+  "date_of_coc_earned",
+  "is_deployment",
+  "earned_hours",
+  "expiry_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_yxdc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Compensatory Overtime Credit Logs",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Read Only",
+   "label": "Created By"
+  },
+  {
+   "fieldname": "overtime_description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Overtime Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "coc_type",
+   "fieldtype": "Autocomplete",
+   "label": "COC Type",
+   "options": "\nHoliday\nRest Day"
+  },
+  {
+   "fieldname": "date_of_coc_earned",
+   "fieldtype": "Date",
+   "label": "Date of COC Earned"
+  },
+  {
+   "fieldname": "earned_hours",
+   "fieldtype": "Float",
+   "label": "Earned Hours",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Date of Expiry"
+  },
+  {
+   "fieldname": "holiday_year",
+   "fieldtype": "Link",
+   "label": "Holiday Year",
+   "options": "Holiday List"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_deployment",
+   "fieldtype": "Check",
+   "label": "Deployment?"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-03-06 09:00:27.214057",
+ "modified_by": "Administrator",
+ "module": "Human Resources",
+ "name": "Compensatory Overtime Credit Logs",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

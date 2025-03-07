@@ -2,3 +2,4 @@ Nex
 Human Resources
 Assets
 Documents
+Stock

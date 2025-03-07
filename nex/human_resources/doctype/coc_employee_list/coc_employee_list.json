@@ -11,7 +11,8 @@
   "holiday_year",
   "date_of_coc_earned",
   "is_deployment",
-  "earned_hours"
+  "earned_hours",
+  "expiry_date"
  ],
  "fields": [
   {
@@ -29,7 +30,8 @@
    "fieldname": "coc_type",
    "fieldtype": "Select",
    "label": "COC Type",
-   "options": "\nHoliday\nRest Day"
+   "options": "\nHoliday\nRest Day",
+   "read_only": 1
   },
   {
    "default": "0",
@@ -39,7 +41,7 @@
   },
   {
    "fieldname": "earned_hours",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Earned Hours",
    "non_negative": 1
   },
@@ -47,13 +49,19 @@
    "fieldname": "holiday_year",
    "fieldtype": "Link",
    "label": "Holiday Year",
-   "options": "Holiday List"
+   "options": "Holiday List",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Date of Expiry"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-02-20 15:33:51.364164",
+ "modified": "2025-03-06 09:01:40.766735",
  "modified_by": "Administrator",
  "module": "Human Resources",
  "name": "COC Employee List",

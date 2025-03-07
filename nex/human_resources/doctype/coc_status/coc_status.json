@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:coc_log_reference",
+ "creation": "2025-03-07 11:07:08.172269",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "coc_log_reference",
+  "date",
+  "employee",
+  "earned_hours",
+  "status",
+  "available_hours",
+  "expiration"
+ ],
+ "fields": [
+  {
+   "fieldname": "coc_log_reference",
+   "fieldtype": "Link",
+   "label": "COC Log Reference",
+   "options": "Compensatory Overtime Credit Logs",
+   "unique": 1
+  },
+  {
+   "fetch_from": "coc_log_reference.date_of_coc_earned",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "options": "Compensatory Overtime Credit Logs"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nAvailable\nPartially Available\nConsumed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "available_hours",
+   "fieldtype": "Float",
+   "label": "Available Hours"
+  },
+  {
+   "fetch_from": "coc_log_reference.earned_hours",
+   "fieldname": "earned_hours",
+   "fieldtype": "Float",
+   "label": "Earned Hours"
+  },
+  {
+   "fetch_from": "coc_log_reference.employee_name",
+   "fieldname": "employee",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Employee Name"
+  },
+  {
+   "fetch_from": "coc_log_reference.expiry_date",
+   "fieldname": "expiration",
+   "fieldtype": "Date",
+   "label": "Expiration"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-07 12:18:28.378844",
+ "modified_by": "Administrator",
+ "module": "Human Resources",
+ "name": "COC Status",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

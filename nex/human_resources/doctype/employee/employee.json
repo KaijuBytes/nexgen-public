@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "field:employee_name",
  "creation": "2025-02-04 07:11:14.298689",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -39,8 +39,11 @@
   "column_break_sjrg",
   "employee_number",
   "trainings_acquired_tab",
+  "number_of_trainings",
   "training_history",
-  "inventory_tab"
+  "inventory_tab",
+  "number_of_inventory",
+  "property_inventory"
  ],
  "fields": [
   {
@@ -122,7 +125,6 @@
    "in_global_search": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "is_virtual": 1,
    "label": "Full Name",
    "read_only": 1,
    "unique": 1
@@ -253,23 +255,40 @@
    "fieldname": "training_history",
    "fieldtype": "Table",
    "label": "Training History",
-   "options": "Employee Training"
+   "options": "Employee Training Table"
   },
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": " Naming Series",
    "options": "\nDRRMD-.YYYY.-.##."
+  },
+  {
+   "fieldname": "property_inventory",
+   "fieldtype": "Table",
+   "label": "Property Inventory",
+   "options": "Employee Inventory"
+  },
+  {
+   "fieldname": "number_of_inventory",
+   "fieldtype": "Int",
+   "label": "Number of Inventory",
+   "read_only": 1
+  },
+  {
+   "fieldname": "number_of_trainings",
+   "fieldtype": "Int",
+   "label": "Number of Trainings",
+   "read_only": 1
   }
  ],
- "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-28 08:04:48.741041",
+ "modified": "2025-03-07 15:24:32.079125",
  "modified_by": "Administrator",
  "module": "Human Resources",
  "name": "Employee",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -296,7 +315,6 @@
    "write": 1
   }
  ],
- "row_format": "Dynamic",
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
