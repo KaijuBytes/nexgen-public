@@ -37,6 +37,12 @@ jobs:
         options: --health-cmd pg_isready --health-timeout 10s
 
     steps:
+      - name: Install Supervisor
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y supervisor
+          sudo systemctl start supervisor
+          
       - name: Clone
         uses: actions/checkout@v3
 
@@ -76,6 +82,15 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
+
+      - name: Install PostgreSQL
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y postgresql postgresql-contrib
+          sudo systemctl start postgresql
+          sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD 'frappe';"
+          sudo -u postgres psql -c "CREATE USER frappe WITH PASSWORD 'frappe';"
+          sudo -u postgres psql -c "CREATE DATABASE test_site OWNER frappe;"
 
       - name: Setup
         run: |
