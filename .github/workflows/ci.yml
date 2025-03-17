@@ -89,7 +89,8 @@ jobs:
           bench setup requirements --dev
           # Retry new-site command
           for i in {1..5}; do
-            bench new-site --db-root-password frappe --admin-password admin --db-type postgres --db-host postgres --db-port 5432 --db-user frappe test_site && break || sleep 10
+            # bench new-site --db-root-password frappe --admin-password admin --db-type postgres --db-host postgres --db-port 5432 --db-user frappe test_site && break || sleep 10
+            bench new-site --db-root-password frappe --admin-password admin --db-type postgres test_site && break || sleep 10
             if [ $i -eq 5 ]; then
               echo "Failed to create site after multiple retries"
               exit 1
