@@ -87,7 +87,14 @@ jobs:
         run: |
           bench get-app nex $GITHUB_WORKSPACE
           bench setup requirements --dev
-          bench new-site --db-root-password frappe --admin-password admin --db-type postgres --db-host postgres --db-port 5432 --db-user frappe test_site
+          # Retry new-site command
+          for i in {1..5}; do
+            bench new-site --db-root-password frappe --admin-password admin --db-type postgres --db-host postgres --db-port 5432 --db-user frappe test_site && break || sleep 10
+            if [ $i -eq 5 ]; then
+              echo "Failed to create site after multiple retries"
+              exit 1
+            fi
+          done
           bench --site test_site install-app nex
           bench build
         env:
