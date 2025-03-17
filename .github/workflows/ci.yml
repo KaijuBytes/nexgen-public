@@ -81,6 +81,7 @@ jobs:
         run: |
           pip install frappe-bench
           bench init --skip-redis-config-generation --skip-assets --python "$(which python)" ~/frappe-bench
+          docker exec -e PGPASSWORD=frappe postgres psql -U postgres -c "ALTER USER postgres WITH PASSWORD 'frappe';"
 
       - name: Install
         working-directory: /home/runner/frappe-bench
