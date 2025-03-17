@@ -42,7 +42,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y supervisor
           sudo systemctl start supervisor
-          
+
       - name: Clone
         uses: actions/checkout@v3
 
@@ -88,6 +88,23 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y postgresql postgresql-contrib
           sudo systemctl start postgresql
+          # Check service status
+          if systemctl is-active --quiet postgresql; then
+            echo "PostgreSQL service is running."
+          else
+            echo "PostgreSQL service failed to start."
+            sudo systemctl status postgresql
+            exit 1
+          fi
+          # Add a delay
+          sleep 5
+          #Check for socket file
+          if [ -S /var/run/postgresql/.s.PGSQL.5432 ]; then
+            echo "PostgreSQL socket file exists."
+          else
+            echo "PostgreSQL socket file does not exist."
+            exit 1
+          fi
           sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD 'frappe';"
           sudo -u postgres psql -c "CREATE USER frappe WITH PASSWORD 'frappe';"
           sudo -u postgres psql -c "CREATE DATABASE test_site OWNER frappe;"
