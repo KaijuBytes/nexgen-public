@@ -3,3 +3,7 @@ Human Resources
 Assets
 Documents
 Stock
+Quality Management
+Projects
+Support
+Maintenance
