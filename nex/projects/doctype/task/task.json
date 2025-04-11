@@ -1,0 +1,295 @@
+{
+ "actions": [],
+ "autoname": "TASK-.YYYY.-.#####",
+ "creation": "2025-04-10 10:44:10.586391",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "subject",
+  "project",
+  "issue",
+  "type",
+  "color",
+  "is_group",
+  "is_template",
+  "column_break_ghhk",
+  "status",
+  "priority",
+  "weight",
+  "parent_task",
+  "completed_by",
+  "completed_on",
+  "timeline_section",
+  "expected_start_date",
+  "expected_time",
+  "begin_on",
+  "column_break_keim",
+  "expexted_end_date",
+  "_progress",
+  "duration",
+  "is_milestone",
+  "details_section",
+  "task_description",
+  "via_timesheet_section",
+  "actual_start_date",
+  "actual_time_in_hours",
+  "column_break_lpcj",
+  "actual_end_date",
+  "more_info_section",
+  "review_date",
+  "closing_date",
+  "column_break_zlfi",
+  "lft",
+  "rgt",
+  "old_parent"
+ ],
+ "fields": [
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Data",
+   "label": "Project"
+  },
+  {
+   "fieldname": "issue",
+   "fieldtype": "Data",
+   "label": "Issue"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "Type"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "label": "Color"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_template",
+   "fieldtype": "Check",
+   "label": "Is Template"
+  },
+  {
+   "fieldname": "column_break_ghhk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nWorking\nPending Review\nOverdue\nTemplate\nCompleteda\nCancelled"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Data",
+   "label": "Priority"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "parent_task",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Parent Task",
+   "options": "Task"
+  },
+  {
+   "fieldname": "completed_by",
+   "fieldtype": "Data",
+   "label": "Completed By"
+  },
+  {
+   "fieldname": "completed_on",
+   "fieldtype": "Date",
+   "label": "Completed On"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "timeline_section",
+   "fieldtype": "Section Break",
+   "label": "Timeline"
+  },
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Datetime",
+   "label": "Expected Start Date"
+  },
+  {
+   "description": "in hours",
+   "fieldname": "expected_time",
+   "fieldtype": "Float",
+   "label": "Expected Time"
+  },
+  {
+   "description": "Days",
+   "fieldname": "begin_on",
+   "fieldtype": "Int",
+   "label": "Begin On"
+  },
+  {
+   "fieldname": "column_break_keim",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expexted_end_date",
+   "fieldtype": "Datetime",
+   "label": "Expexted End Date"
+  },
+  {
+   "fieldname": "_progress",
+   "fieldtype": "Percent",
+   "label": "% Progress"
+  },
+  {
+   "description": "Days",
+   "fieldname": "duration",
+   "fieldtype": "Int",
+   "label": "Duration"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_milestone",
+   "fieldtype": "Check",
+   "label": "Is Milestone"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "task_description",
+   "fieldtype": "Text Editor",
+   "label": "Task Description"
+  },
+  {
+   "fieldname": "via_timesheet_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "actual_start_date",
+   "fieldtype": "Date",
+   "label": "Actual Start Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actual_time_in_hours",
+   "fieldtype": "Float",
+   "label": "Actual Time in Hours",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_lpcj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_end_date",
+   "fieldtype": "Date",
+   "label": "Actual End Date",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "more_info_section",
+   "fieldtype": "Section Break",
+   "label": "More Info"
+  },
+  {
+   "fieldname": "review_date",
+   "fieldtype": "Date",
+   "label": "Review Date"
+  },
+  {
+   "fieldname": "closing_date",
+   "fieldtype": "Date",
+   "label": "Closing Date"
+  },
+  {
+   "fieldname": "column_break_zlfi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "Task"
+  },
+  {
+   "fieldname": "parent_task",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Parent Task",
+   "options": "Task"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_tree": 1,
+ "links": [],
+ "modified": "2025-04-10 11:13:57.786159",
+ "modified_by": "Administrator",
+ "module": "Projects",
+ "name": "Task",
+ "naming_rule": "Expression (old style)",
+ "nsm_parent_field": "parent_task",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_seen": 1
+}
