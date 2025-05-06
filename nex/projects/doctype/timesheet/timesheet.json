@@ -10,10 +10,8 @@
  "field_order": [
   "title",
   "naming_series",
-  "currency",
   "column_break_3",
   "status",
-  "parent_project",
   "employee_detail",
   "employee",
   "employee_name",
@@ -153,27 +151,13 @@
    "options": "Timesheet",
    "print_hide": 1,
    "read_only": 1
-  },
-  {
-   "fieldname": "parent_project",
-   "fieldtype": "Link",
-   "label": "Project",
-   "options": "Project"
-  },
-  {
-   "fetch_from": "customer.default_currency",
-   "fetch_if_empty": 1,
-   "fieldname": "currency",
-   "fieldtype": "Link",
-   "label": "Currency",
-   "options": "Currency"
   }
  ],
  "icon": "fa fa-clock-o",
  "idx": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-10 15:20:14.406670",
+ "modified": "2025-05-06 16:22:32.603090",
  "modified_by": "Administrator",
  "module": "Projects",
  "name": "Timesheet",

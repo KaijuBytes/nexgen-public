@@ -6,17 +6,15 @@
  "engine": "InnoDB",
  "field_order": [
   "subject",
+  "task_type",
   "project",
   "issue",
-  "type",
   "color",
-  "is_group",
   "is_template",
   "column_break_ghhk",
   "status",
   "priority",
   "weight",
-  "parent_task",
   "completed_by",
   "completed_on",
   "timeline_section",
@@ -41,7 +39,9 @@
   "column_break_zlfi",
   "lft",
   "rgt",
-  "old_parent"
+  "old_parent",
+  "is_group",
+  "parent_task"
  ],
  "fields": [
   {
@@ -53,18 +53,15 @@
   },
   {
    "fieldname": "project",
-   "fieldtype": "Data",
-   "label": "Project"
+   "fieldtype": "Link",
+   "label": "Project (Reference)",
+   "options": "Project"
   },
   {
    "fieldname": "issue",
-   "fieldtype": "Data",
-   "label": "Issue"
-  },
-  {
-   "fieldname": "type",
-   "fieldtype": "Data",
-   "label": "Type"
+   "fieldtype": "Link",
+   "label": "Issue (Reference)",
+   "options": "Issue"
   },
   {
    "fieldname": "color",
@@ -91,12 +88,16 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Open\nWorking\nPending Review\nOverdue\nTemplate\nCompleteda\nCancelled"
+   "options": "Open\nWorking\nPending Review\nOverdue\nTemplate\nCompleted\nCancelled"
   },
   {
    "fieldname": "priority",
-   "fieldtype": "Data",
-   "label": "Priority"
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Priority",
+   "options": "Medium\nLow\nHigh",
+   "reqd": 1
   },
   {
    "fieldname": "weight",
@@ -150,7 +151,10 @@
   {
    "fieldname": "expexted_end_date",
    "fieldtype": "Datetime",
-   "label": "Expexted End Date"
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Expexted End Date",
+   "reqd": 1
   },
   {
    "fieldname": "_progress",
@@ -177,7 +181,8 @@
   {
    "fieldname": "task_description",
    "fieldtype": "Text Editor",
-   "label": "Task Description"
+   "label": "Task Description",
+   "reqd": 1
   },
   {
    "fieldname": "via_timesheet_section",
@@ -259,13 +264,21 @@
    "ignore_user_permissions": 1,
    "label": "Parent Task",
    "options": "Task"
+  },
+  {
+   "fieldname": "task_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Task Type",
+   "options": "General\nSpecial"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2025-04-10 11:13:57.786159",
+ "modified": "2025-05-06 16:17:28.730842",
  "modified_by": "Administrator",
  "module": "Projects",
  "name": "Task",
