@@ -8,6 +8,7 @@
   "title",
   "from",
   "status",
+  "priority",
   "completed_status",
   "transaction_type",
   "description",
@@ -18,6 +19,8 @@
   "responsible",
   "email_of_the_responsible",
   "control_number_outside",
+  "date_created",
+  "time_created",
   "created_by",
   "last_modified_by",
   "attachment_method",
@@ -153,12 +156,30 @@
    "fieldtype": "Table MultiSelect",
    "label": "Single Document/s or Record/s",
    "options": "Single Document TableMultiSelect"
+  },
+  {
+   "fieldname": "date_created",
+   "fieldtype": "Date",
+   "label": "Date Created",
+   "read_only": 1
+  },
+  {
+   "fieldname": "time_created",
+   "fieldtype": "Time",
+   "label": "Time Created",
+   "read_only": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "\nLow\nMedium\nHigh"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-28 07:35:04.914357",
+ "modified": "2025-05-09 10:13:18.452361",
  "modified_by": "Administrator",
  "module": "Documents",
  "name": "Document Tracker",

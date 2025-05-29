@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:ISSUE-{YYYYMM}-{#####}",
  "creation": "2025-04-08 16:35:18.481194",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -8,6 +9,7 @@
   "subject",
   "created_by",
   "raised_by",
+  "last_update_by",
   "column_break_lssl",
   "status",
   "priority",
@@ -196,15 +198,21 @@
    "fieldname": "content_type",
    "fieldtype": "Data",
    "label": "Content Type"
+  },
+  {
+   "fieldname": "last_update_by",
+   "fieldtype": "Data",
+   "label": "Last Update By"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-08 17:09:53.684036",
+ "modified": "2025-05-23 11:18:53.493646",
  "modified_by": "Administrator",
  "module": "Support",
  "name": "Issue",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

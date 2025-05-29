@@ -1,0 +1,47 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"EPAhryGDqa\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Activity Monitoring</span>\",\"col\":12}},{\"id\":\"tmwj21SlkU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Task\",\"col\":3}},{\"id\":\"MoMHhhr2Zx\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Task Logs\",\"col\":3}},{\"id\":\"66KKygVSVw\",\"type\":\"paragraph\",\"data\":{\"text\":\"Reports &amp; Masters\",\"col\":12}}]",
+ "creation": "2025-04-10 10:43:31.042541",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "group-by",
+ "idx": 1,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Activity Monitoring",
+ "links": [],
+ "modified": "2025-05-23 11:12:25.640833",
+ "modified_by": "Administrator",
+ "module": "Projects",
+ "name": "Activity Monitoring",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 5.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "format": "{} Assigned",
+   "label": "Task",
+   "link_to": "Task",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Task Logs",
+   "link_to": "Task Logs",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Activity Monitoring"
+}

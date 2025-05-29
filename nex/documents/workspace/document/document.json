@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"Zb3o-HwdoW\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Document</span>\",\"col\":12}},{\"id\":\"Kachu5mvUv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tracker\",\"col\":3}},{\"id\":\"Q9aS0Us8GK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tracker Logs\",\"col\":4}},{\"id\":\"p9JfSqlP6J\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Records\",\"col\":3}},{\"id\":\"x4kLJ4f6eK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"6Kpx-AxtDJ\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"H4dHddsZFx\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
+ "content": "[{\"id\":\"Zb3o-HwdoW\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Document</span>\",\"col\":12}},{\"id\":\"Kachu5mvUv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tracker\",\"col\":3}},{\"id\":\"pvfMhPgYze\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tracker Logs\",\"col\":3}},{\"id\":\"p9JfSqlP6J\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Records\",\"col\":3}},{\"id\":\"x4kLJ4f6eK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"6Kpx-AxtDJ\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"H4dHddsZFx\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
  "creation": "2025-02-17 10:01:26.179225",
  "custom_blocks": [],
  "docstatus": 0,
@@ -33,7 +33,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-04-10 13:59:52.884735",
+ "modified": "2025-05-21 13:42:58.518632",
  "modified_by": "Administrator",
  "module": "Documents",
  "name": "Document",
@@ -55,21 +55,20 @@
    "type": "DocType"
   },
   {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Tracker Logs",
+   "link_to": "Document Tracker Logs",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
    "color": "Orange",
    "doc_view": "List",
    "format": "{} On-going",
    "label": "Tracker",
    "link_to": "Document Tracker",
    "stats_filter": "[[\"Document Tracker\",\"status\",\"=\",\"Ongoing\",false]]",
-   "type": "DocType"
-  },
-  {
-   "color": "Red",
-   "doc_view": "List",
-   "format": "{} Ongoing",
-   "label": "Tracker Logs",
-   "link_to": "Document Tracker Logs",
-   "stats_filter": "[[\"Document Tracker Logs\",\"tracker_status\",\"=\",\"On-going\",false]]",
    "type": "DocType"
   }
  ],

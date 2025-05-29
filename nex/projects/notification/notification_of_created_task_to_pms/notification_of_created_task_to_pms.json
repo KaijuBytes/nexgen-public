@@ -1,0 +1,29 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition": "doc.authorized==0",
+ "creation": "2025-05-26 14:10:00.149921",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Task",
+ "enabled": 1,
+ "event": "Save",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Add your message here",
+ "message_type": "Markdown",
+ "modified": "2025-05-26 14:10:00.149921",
+ "modified_by": "Administrator",
+ "module": "Projects",
+ "name": "Notification of Created Task to PMs",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "Projects Manager"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "{{ doc.name }} is Created and Needs Authorization"
+}

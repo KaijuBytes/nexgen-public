@@ -1,26 +1,24 @@
 // Copyright (c) 2025, Lanz Martinez and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Issue", {
+// frappe.ui.form.on("Task", {
 // 	refresh(frm) {
 
 // 	},
 // });
-frappe.ui.form.on("Issue", {
+frappe.ui.form.on("Task", {
     refresh: function(frm) {
         setCreatorAndModifierNames(frm);
         setupTooltips(frm);
         frm.trigger('create_icon'); // Trigger the create_icon function
     },
     create_icon: function(frm) {
-        frm.add_custom_button(__("Add to Task"), function() {
+        frm.add_custom_button(__("Add Log"), function() {
         //     alert('custom button')
         // }).css({"color":"white", "background-color": "#0033cc", "font-weight": "800"});
-            frappe.new_doc('Task', {
+            frappe.new_doc('Task Logs', {
+                task_id: frm.doc.name,
                 subject: frm.doc.subject,
-                priority: frm.doc.priority,
-                task_description: frm.doc.description,
-                issue: frm.doc.id
             });
         });
     }
@@ -28,7 +26,7 @@ frappe.ui.form.on("Issue", {
 
 function setCreatorAndModifierNames(frm) {
     fetchUserName(frm, frm.doc.owner, 'created_by', "Creator");
-    fetchUserName(frm, frm.doc.modified_by, 'last_updated_by', "Modifier");
+    fetchUserName(frm, frm.doc.modified_by, 'last_modified_by', "Modifier");
 }
 
 function fetchUserName(frm, userName, fieldName, logPrefix) {

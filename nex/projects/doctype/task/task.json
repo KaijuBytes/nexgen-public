@@ -6,26 +6,34 @@
  "engine": "InnoDB",
  "field_order": [
   "subject",
-  "task_type",
-  "project",
-  "issue",
-  "color",
-  "is_template",
-  "column_break_ghhk",
   "status",
   "priority",
-  "weight",
+  "assignment_type",
+  "color",
+  "authorized",
+  "column_break_ghhk",
+  "last_log_update",
   "completed_by",
   "completed_on",
+  "created_by",
+  "last_modified_by",
   "timeline_section",
   "expected_start_date",
   "expected_time",
   "begin_on",
+  "timeliness",
+  "is_overdue",
   "column_break_keim",
-  "expexted_end_date",
-  "_progress",
+  "expected_end_date",
+  "progress",
   "duration",
   "is_milestone",
+  "references_section",
+  "issue",
+  "column_break_egpa",
+  "doctracker_reference",
+  "column_break_wdzs",
+  "project",
   "details_section",
   "task_description",
   "via_timesheet_section",
@@ -54,6 +62,7 @@
   {
    "fieldname": "project",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Project (Reference)",
    "options": "Project"
   },
@@ -75,20 +84,16 @@
    "label": "Is Group"
   },
   {
-   "default": "0",
-   "fieldname": "is_template",
-   "fieldtype": "Check",
-   "label": "Is Template"
-  },
-  {
    "fieldname": "column_break_ghhk",
    "fieldtype": "Column Break"
   },
   {
+   "default": "Open",
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Open\nWorking\nPending Review\nOverdue\nTemplate\nCompleted\nCancelled"
+   "options": "Open\nWorking\nPending Review\nOverdue\nCompleted\nCancelled",
+   "read_only": 1
   },
   {
    "fieldname": "priority",
@@ -96,13 +101,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Priority",
-   "options": "Medium\nLow\nHigh",
-   "reqd": 1
-  },
-  {
-   "fieldname": "weight",
-   "fieldtype": "Data",
-   "label": "Weight"
+   "options": "-\nLow\nMedium\nHigh"
   },
   {
    "fieldname": "parent_task",
@@ -114,12 +113,14 @@
   {
    "fieldname": "completed_by",
    "fieldtype": "Data",
-   "label": "Completed By"
+   "label": "Completed By",
+   "read_only": 1
   },
   {
    "fieldname": "completed_on",
    "fieldtype": "Date",
-   "label": "Completed On"
+   "label": "Completed On",
+   "read_only": 1
   },
   {
    "collapsible": 1,
@@ -147,19 +148,6 @@
   {
    "fieldname": "column_break_keim",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "expexted_end_date",
-   "fieldtype": "Datetime",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Expexted End Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "_progress",
-   "fieldtype": "Percent",
-   "label": "% Progress"
   },
   {
    "description": "Days",
@@ -266,19 +254,88 @@
    "options": "Task"
   },
   {
-   "fieldname": "task_type",
+   "fieldname": "expected_end_date",
+   "fieldtype": "Datetime",
+   "label": "Expected End Date"
+  },
+  {
+   "fieldname": "doctracker_reference",
+   "fieldtype": "Link",
+   "label": "DocTracker (Reference)",
+   "options": "Document Tracker"
+  },
+  {
+   "fieldname": "last_log_update",
+   "fieldtype": "Datetime",
+   "label": "Last Log Update",
+   "read_only": 1
+  },
+  {
+   "fieldname": "references_section",
+   "fieldtype": "Section Break",
+   "label": "References"
+  },
+  {
+   "fieldname": "column_break_egpa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wdzs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Autocomplete",
+   "label": "Created By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_modified_by",
+   "fieldtype": "Autocomplete",
+   "label": "Last Modified By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "timeliness",
+   "fieldtype": "Select",
+   "label": "Timeliness",
+   "options": "\nOn Time\nOverdue"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_overdue",
+   "fieldtype": "Check",
+   "label": "Is Overdue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "assignment_type",
    "fieldtype": "Select",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Task Type",
-   "options": "General\nSpecial"
+   "label": "Assignment Type",
+   "options": "\nGeneral\nSpecific"
+  },
+  {
+   "default": "0",
+   "fieldname": "authorized",
+   "fieldtype": "Check",
+   "label": "Authorized?",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "progress",
+   "fieldtype": "Float",
+   "label": "% Progress"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2025-05-06 16:17:28.730842",
+ "modified": "2025-05-29 08:55:11.580948",
  "modified_by": "Administrator",
  "module": "Projects",
  "name": "Task",
@@ -297,6 +354,66 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "role": "Projects User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin Staff"
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin Staff",
+   "share": 1
   }
  ],
  "quick_entry": 1,
@@ -304,5 +421,7 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "track_seen": 1
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }
