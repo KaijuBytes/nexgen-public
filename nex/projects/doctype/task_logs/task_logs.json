@@ -25,7 +25,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "\nWorking\nPending Review\nCompleted\nCancelled",
+   "options": "\nWorking\nPending Review\nCompleted\nCancelled\nSystem Log", 
    "reqd": 1
   },
   {
@@ -68,7 +68,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-28 15:40:56.933972",
+ "modified": "2025-05-30 08:56:23.636842",
  "modified_by": "Administrator",
  "module": "Projects",
  "name": "Task Logs",

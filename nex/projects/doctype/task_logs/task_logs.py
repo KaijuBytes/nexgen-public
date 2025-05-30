@@ -13,7 +13,6 @@ class TaskLogs(Document):
         """
         task_id = self.task_id
         if not task_id:
-            # If task_id is not set, raise an error as it's crucial for naming
             frappe.throw(_("Task ID is required for Task Log naming."))
 
         latest_doc = frappe.db.sql(
@@ -32,11 +31,9 @@ class TaskLogs(Document):
         if latest_doc:
             latest_name = latest_doc[0]["name"]
             try:
-                # Extract the sequence number from the latest name
                 latest_sequence = int(latest_name.split("-LOG-")[1])
                 new_sequence = latest_sequence + 1
             except (IndexError, ValueError):
-                # Fallback if parsing fails, start from 1
                 new_sequence = 1
 
         self.name = f"{task_id}-LOG-{new_sequence:03d}"
@@ -44,48 +41,80 @@ class TaskLogs(Document):
     def validate(self):
         """
         Validates the Task Log document before saving.
-        Role-based validation for 'Completed' status is now handled exclusively
-        in the Task DocType's before_save hook.
         """
-        # No specific role-based validation here anymore.
-        # Any validation for setting Task status to 'Completed' will occur
-        # when the parent Task document is updated by this Task Log's on_submit hook.
-        pass
+        # Ensure log_description is not empty if it's required
+        if not self.log_description:
+            frappe.throw(_("Log Description is required."))
 
     def on_submit(self):
         """
-        This hook runs when a Task Log document is submitted.
-        It updates the parent Task's status based on the Task Log's status.
-        The parent Task document is loaded, its status is set, and then saved
-        to ensure its own hooks (like before_save) are triggered for validation.
+        Updates the status of the associated Task when the Task Log is submitted.
+        This version checks for a special 'System Log' status or specific description keywords
+        to prevent status updates for auto-generated logs (like child added/removed).
         """
-        if self.task_id:
+        frappe.log_error(f"Task Log {self.name}: Entering on_submit hook.", "Task Log On Submit Hook")
+        
+        # Define statuses or description keywords that indicate a system-generated log
+        # that should NOT change the parent Task's status.
+        SYSTEM_LOG_STATUSES = ["System Log"] # This status MUST exist in your Task Logs DocType's 'status' field options
+        SYSTEM_LOG_DESCRIPTION_KEYWORDS = ["Child Task Added:", "Child Task Removed:", "Task authorization changed by system."]
+
+        is_system_log = False
+        if self.status in SYSTEM_LOG_STATUSES:
+            is_system_log = True
+        else:
+            for keyword in SYSTEM_LOG_DESCRIPTION_KEYWORDS:
+                if keyword in self.log_description:
+                    is_system_log = True
+                    break
+
+        if self.task_id and self.status and not is_system_log:
             try:
-                # Load the Task document
                 task_doc = frappe.get_doc("Task", self.task_id)
-
-                # Update the status
-                task_doc.status = self.status
-
-                # Save the Task document. This will trigger its own before_save/validate hooks.
-                task_doc.save(ignore_permissions=False) # Keep ignore_permissions=False to respect Task's permissions/validation
-
-                frappe.log_error(f"Task Log {self.name}: Parent Task {self.task_id} status updated to '{self.status}' via Task's save method.", "Task Log On Submit Success")
+                # Only update if the status is genuinely different to avoid unnecessary saves/hooks
+                if task_doc.status != self.status:
+                    task_doc.status = self.status
+                    task_doc.save(ignore_permissions=False) # This will trigger Task's after_save for progress update
+                    frappe.log_error(f"Task Log {self.name}: Parent Task {self.task_id} status updated to '{self.status}' via Task's save method.", "Task Log On Submit Success")
+                else:
+                    frappe.log_error(f"Task Log {self.name}: Task {self.task_id} status already '{self.status}'. No change needed.", "Task Status No Change")
             except Exception as e:
-                # If saving the Task fails (e.g., due to validation in Task's before_save),
-                # the Task Log submission should ideally be rolled back or an error should be clearly shown.
-                # In Frappe, if an exception is raised in an on_submit hook, the entire transaction is usually rolled back.
                 error_message = f"Task Log {self.name}: Failed to update parent Task {self.task_id} status: {e}"
                 frappe.log_error(error_message, "Task Log On Submit Error")
-                # Re-raise the exception to prevent the Task Log from being submitted if the Task update fails.
                 frappe.throw(_(error_message))
+        elif is_system_log:
+            frappe.log_error(f"Task Log {self.name}: System log detected. Skipping parent Task status update.", "System Log Skipped Status Update")
+        else:
+            frappe.log_error(f"Task Log {self.name}: No task_id or status, or already a system log. No status update for parent.", "No Update Condition Met")
 
-    # You can add other standard Frappe hooks here if needed, e.g.:
-    # def before_insert(self):
-    #     pass
+# --- NEW WHITELISTED METHOD: For creating logs without status update ---
+@frappe.whitelist()
+def create_task_log_without_status_update(task_id, log_description):
+    """
+    Creates a Task Log entry without triggering a status update on the associated Task.
+    This is useful for system-generated logs like child task additions/removals, or authorization changes.
+    It uses a neutral 'System Log' status which is then ignored by the on_submit hook.
+    """
+    if not task_id or not log_description:
+        frappe.throw(_("Task ID and Log Description are required to create a system log."))
 
-    # def on_update(self):
-    #     pass
-
-    # def on_cancel(self):
-    #     pass
+    try:
+        new_log = frappe.get_doc({
+            "doctype": "Task Logs",
+            "task_id": task_id,
+            "log_description": log_description,
+            "status": "System Log", # Use a specific status to mark it as a system log (must exist in Task Logs options)
+            "log_date": frappe.utils.nowdate(),
+            "log_time": frappe.utils.now_time(),
+            "log_created_by": frappe.session.user # Logs created by the current user
+        })
+        # Insert and submit the log. The on_submit hook will check for "System Log" status
+        # and prevent the parent task's status from changing.
+        new_log.insert(ignore_permissions=True, ignore_hooks=True) # Ignore hooks to prevent recursive calls if Task Logs had other hooks
+        new_log.submit() # Submit to set docstatus
+        frappe.db.commit() # Ensure the log is committed immediately
+        frappe.log_error(f"Task Log (System): Created for Task {task_id}: {log_description}", "System Log Created Successfully")
+        return new_log.name
+    except Exception as e:
+        frappe.log_error(f"Task Log (System): Failed to create system log for Task {task_id}: {e}", "System Log Creation Error")
+        frappe.throw(_(f"Failed to create system task log: {e}"))
