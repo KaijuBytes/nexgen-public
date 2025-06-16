@@ -223,7 +223,6 @@
   {
    "fieldname": "lft",
    "fieldtype": "Int",
-   "hidden": 1,
    "label": "Left",
    "no_copy": 1,
    "read_only": 1
@@ -231,7 +230,6 @@
   {
    "fieldname": "rgt",
    "fieldtype": "Int",
-   "hidden": 1,
    "label": "Right",
    "no_copy": 1,
    "read_only": 1
@@ -340,7 +338,7 @@
  "is_calendar_and_gantt": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2025-05-30 15:14:41.766458",
+ "modified": "2025-06-04 15:26:03.622287",
  "modified_by": "Administrator",
  "module": "Projects",
  "name": "Task",
@@ -376,6 +374,7 @@
    "email": 1,
    "export": 1,
    "print": 1,
+   "read": 1,
    "report": 1,
    "role": "Projects User",
    "share": 1,

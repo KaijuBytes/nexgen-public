@@ -245,3 +245,8 @@ app_license = "unlicense"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 app_include_css = "/assets/nex/css/custom.css"
+
+# hooks.py
+permission_query_conditions = {
+    "Task": "nex.projects.permissions.get_permission_query_conditions_for_Task"
+}

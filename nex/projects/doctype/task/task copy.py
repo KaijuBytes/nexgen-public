@@ -172,3 +172,76 @@ def get_user_full_name(user_id):
 
     full_name = frappe.db.get_value("User", user_id, "full_name")
     return full_name
+
+
+
+
+# File: your_custom_app/your_custom_app/doctype/task/task.py
+
+import frappe
+from frappe.model.document import Document
+
+class Task(Document):
+    # This method is called by Frappe's permission engine to determine
+    # what records a user can see in a list view or when fetching data.
+    def has_permission(self, ptype, user):
+        """
+        Custom permission logic for the Task DocType.
+        Allows users to see tasks if they are:
+        1. The owner of the task.
+        2. Assigned to the task (via the '_assign' field).
+        3. The task is explicitly shared with them.
+
+        Args:
+            ptype (str): The type of permission being checked (e.g., 'read', 'write', 'create', 'delete').
+            user (str): The user ID for whom the permission is being checked.
+
+        Returns:
+            str: A SQL WHERE clause string if the permission type is 'read',
+                 otherwise None to let Frappe's default permission system handle it.
+        """
+        # We only want to apply this custom logic for 'read' permissions (list view, reports).
+        if ptype == "read":
+            # Get the current user's ID from the Frappe session.
+            current_user = frappe.session.user
+
+            # Initialize a list to hold individual SQL conditions.
+            conditions = []
+
+            # Condition 1: The current user is the owner of the task.
+            # Frappe automatically adds the `tabTask` prefix for the current DocType.
+            conditions.append(f"`tabTask`.owner = '{current_user}'")
+
+            # Condition 2: The current user is assigned to the task via the _assign field.
+            # The LIKE operator with wildcards handles partial matches within the string,
+            # which is suitable for how _assign stores multiple users (e.g., as a JSON string or comma-separated).
+            conditions.append(f"`tabTask`._assign LIKE '%{current_user}%'")
+
+            # Condition 3: The task is explicitly shared with the current user.
+            # We join with the `tabDocShare` table to check for sharing records.
+            # `ds.share_doctype` must be 'Task', `ds.share_name` matches the task's `name` (primary key),
+            # `ds.user` is the current user, and `ds.read` permission is granted.
+            share_condition = f"""
+                EXISTS (
+                    SELECT 1 FROM `tabDocShare` ds
+                    WHERE ds.user = '{current_user}'
+                    AND ds.share_doctype = 'Task'
+                    AND ds.share_name = `tabTask`.name
+                    AND ds.read = 1
+                )
+            """
+            conditions.append(share_condition)
+
+            # Combine all conditions using 'OR'.
+            # This means if ANY of the conditions are true, the task will be visible.
+            combined_filter = " OR ".join(conditions)
+
+            # Return the complete SQL WHERE clause.
+            # The `tabTask`.name LIKE '%' is a common Frappe pattern to ensure the query
+            # correctly applies the filter to the DocType's primary key.
+            return f"(`tabTask`.name LIKE '%' AND ({combined_filter}))"
+        else:
+            # For other permission types (write, create, delete),
+            # let Frappe's standard permission system handle the checks.
+            return None
+
