@@ -1,0 +1,32 @@
+"ID","DocType","Apply To","Module (for export)","Enabled","Script"
+"Hide Completed Status from Non PM","Task Logs","Form","Projects",1,"frappe.ui.form.on('Task Logs', {
+    onload: function(frm) {
+        // Check if the user has the 'Projects Manager' role
+        const hasManagerRole = frappe.user_roles.includes(""Projects Manager"");
+        console.log(""User has 'Projects Manager' role:"", hasManagerRole);
+
+        if (!hasManagerRole) {
+            // Get the field
+            const statusField = frm.fields_dict.status;
+
+            // Filter out the ""Completed"" option
+            const originalOptions = statusField.df.options.split('\n');
+            const filteredOptions = originalOptions.filter(opt => opt.trim() !== ""Completed"");
+
+            // Log the options before and after filtering
+            console.log(""Original Status Options:"", originalOptions);
+            console.log(""Filtered Status Options (without Completed):"", filteredOptions);
+
+            // Update the field options
+            statusField.df.options = filteredOptions.join('\n');
+            frm.refresh_field('status');
+        }
+    }
+});
+"
+"Hide Add Task Logs Button","Task Logs","List","Projects",1,"frappe.listview_settings['Task Logs'] = {
+    onload(listview) {
+        $('.btn-primary').hide();
+    }, // <--- YOU NEED A COMMA HERE!
+    add_fields: ['owner'],
+};"

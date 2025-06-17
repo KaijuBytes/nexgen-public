@@ -55,7 +55,7 @@
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-02-28 08:40:13.888714",
+ "modified": "2025-06-17 08:23:11.315957",
  "modified_by": "Administrator",
  "module": "Human Resources",
  "name": "Training Program",
@@ -81,7 +81,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Human Resources User",
+   "role": "Human Resource Manager",
    "share": 1,
    "write": 1
   }
