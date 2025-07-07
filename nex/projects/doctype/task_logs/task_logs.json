@@ -10,6 +10,7 @@
   "log_date",
   "log_time",
   "log_created_by",
+  "share_task_with",
   "log_description",
   "amended_from"
  ],
@@ -25,7 +26,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "\nWorking\nPending Review\nCompleted\nCancelled\nSystem Log", 
+   "options": "\nWorking\nPending Review\nCompleted\nCancelled\nSystem Log",
    "reqd": 1
   },
   {
@@ -62,13 +63,20 @@
    "fieldtype": "Link",
    "label": "Log Created By",
    "options": "User"
+  },
+  {
+   "fieldname": "share_task_with",
+   "fieldtype": "Link",
+   "label": "Share Task With",
+   "options": "User",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-30 08:56:23.636842",
+ "modified": "2025-06-23 10:41:17.907916",
  "modified_by": "Administrator",
  "module": "Projects",
  "name": "Task Logs",
