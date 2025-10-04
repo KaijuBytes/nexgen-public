@@ -595,3 +595,35 @@ function setupTooltips(frm) {
         console.log("TASK JS: Tooltips set up.");
     }
 }
+
+frappe.ui.form.on("Task", {
+    ai_task_summary: function(frm) {
+        frappe.call({
+            method: "nex.projects.doctype.task.task.get_ai_task_summary",
+            args: { task_name: frm.doc.name },
+            callback: function(r) {
+                if (r.message) {
+                    frappe.msgprint({
+                        title: __("AI Task Summary"),
+                        message: r.message,
+                        indicator: "blue"
+                    });
+                } else {
+                    frappe.msgprint(__("No summary returned from AI."));
+                }
+            },
+            error: function() {
+                frappe.msgprint(__("Failed to fetch AI summary."));
+            }
+        });
+    }
+});
+
+// Add the button on form refresh
+frappe.ui.form.on("Task", {
+    refresh: function(frm) {
+        frm.add_custom_button(__('AI Task Summary'), function() {
+            frm.trigger('ai_task_summary');
+        }, __("Actions"));
+    }
+});
