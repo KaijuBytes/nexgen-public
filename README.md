@@ -1,5 +1,5 @@
 ### Nex
-
+ERP using Frappe Framework, with AI Task Summarization using Ollama
 Record, Automation, and Reports
 
 ### Installation
